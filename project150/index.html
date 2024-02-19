@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script
+src="https://aframe.io/releases/1.0.4/aframe.min.js">
+</script>
+
+</head>
+
+<body>
+
+    <a-entity position="0 0 15">
+        <a-camera></a-camera>
+    </a-entity>
+
+    <a-scene background="color:gray">
+        <a-assets>
+            <!-- Summoning Train -->
+            <a-assets-item id="train-tinker.obj" src="./models/train/tinker.obj"> 
+            </a-assets-item>
+
+            <a-assets-item id="train-obj.mtl" src="./models/train/obj.mtl"> 
+            </a-assets-item>
+                
+        </a-assets>
+        <a-entity 
+        obj-model="#train-tinker.obj; mtl:#train-obj.mtl" 
+        position="5 0 0" 
+        rotation="-90 -40 0" 
+        scale="0.1 0.1 0.1">
+
+        </a-entity>
+
+    </a-scene>
+</body>
